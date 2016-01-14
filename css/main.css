@@ -1,0 +1,85 @@
+@CHARSET "ISO-8859-1";
+
+.block-top {
+	background: #e5e9e9;
+	height: 50px;
+	border-bottom: 1px solid #bdbdbd;
+}
+
+#resume {
+}
+
+.block-menu {
+	background: #f2f2f2;
+	height: 50px;
+	border-bottom: 1px solid #bdbdbd;
+}
+
+.block-bot {
+	background: #e5e9e9;
+	height: calc(100% - 300px);
+}
+
+.block-bot-content {
+	background: #e5e9e9;
+	height: 100%;
+}
+
+.font-name {
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.font-player {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.vertical-align {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.button-block-resume {
+	background: #ededed;
+	height: 200px;
+	border: 1px solid #bdbdbd;
+}
+
+.button-block-3 {
+	cursor: pointer;
+	background: #FFFFFF;
+	height:100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 1px solid #bdbdbd;
+}
+
+.button-block-3-active {
+	cursor: pointer;
+	background: #e5e9e9;
+	border-bottom: 1px solid #e5e9e9;
+	height:100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.button-block-3-border-first {
+	border-left: 1px solid #bdbdbd;
+	border-right: 1px solid #bdbdbd;
+	border-top: 1px solid #bdbdbd;
+}
+
+.button-block-3-border-first-active {
+	border-left: 1px solid #bdbdbd;
+	border-right: 1px solid #bdbdbd;
+	border-top: 1px solid #bdbdbd;
+}
+
+.button-block-3-border-added {
+	border-right: 1px solid #bdbdbd;
+	border-top: 1px solid #bdbdbd;	
+}
