@@ -1,12 +1,49 @@
 @CHARSET "ISO-8859-1";
 
+/* ##############################################################################################
+	BLOCK TOP
+############################################################################################## */ 
+
 .block-top {
 	background: #e5e9e9;
 	height: 50px;
 	border-bottom: 1px solid #bdbdbd;
 }
 
-#resume {
+.button-block-player {
+	height: 50px;
+	cursor: pointer;
+	border-bottom: 1px solid #bdbdbd;
+	border-right: 1px solid #bdbdbd;
+}
+
+.button-block-player-first {
+	border-left: 1px solid #bdbdbd;
+}
+
+.button-block-player-hover {
+	background: #f2f2f2;	
+}
+
+.button-block-player-active {
+	cursor: pointer;
+	border-bottom: 1px solid #f2f2f2;
+	background: #f2f2f2;
+}
+
+/* ##############################################################################################
+	TOOLS
+############################################################################################## */ 
+
+.vertical-align {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.vertical-align-only {
+	display: flex;
+	align-items: center;
 }
 
 .block-menu {
@@ -35,15 +72,12 @@
 	font-weight: bold;
 }
 
-.vertical-align {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.font-average {
+	font-size: 12px;
 }
 
 .button-block-resume {
 	background: #ededed;
-	height: 200px;
 	border: 1px solid #bdbdbd;
 }
 
