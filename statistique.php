@@ -1,3 +1,18 @@
+<br /><br />
+<div class="row block-bot-content">
+	<div class="col-md-12 button-block-resume">
+		<table>
+			<tr>
+				<td>Classement zombies tu&#233s : 40</td>
+				<td>Classement zombies tu&#233s : 40</td>
+				<td>Classement zombies tu&#233s : 40</td>
+				<td>Classement zombies tu&#233s : 40</td>
+			</tr>
+		</table>
+	</div>
+</div>
+  	
+  	
   	Nombres de parties jou&#233es :<br />
   	Nombres de joueurs moyen par partie :<br />
   	Nombres de parties finies avec le meilleur score :<br />
