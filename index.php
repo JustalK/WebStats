@@ -50,6 +50,7 @@ html,body
 				  <div id="statistique" class="col-md-1 button-block-3 button-block-3-border-added">Statistiques</div>
 				  <div id="live" class="col-md-1 button-block-3 button-block-3-border-added">Live</div>
 				</div>
+				
 			</div>
 		</div>
 		<div class="row block-bot">
