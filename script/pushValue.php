@@ -1,4 +1,6 @@
 <?php
+	$pseudo = $_POST["JOUEUR"];
+	$value = $_POST["VALUE"];
 	$mysqli = mysqli_connect("localhost:3306", "root", "", "webstats");
 	
 	if (!$mysqli) {
@@ -8,13 +10,9 @@
 		exit;
 	}
 	
-	$res = $mysqli->query("SELECT id FROM ".$_POST["JOUEUR"]." ORDER BY id ASC");
+	//$res = $mysqli->query("SELECT id FROM $pseudo ORDER BY id ASC");
+	//$row['id'];
+	$mysqli->query("INSERT INTO $pseudo(id) VALUES ($value)");
 	
-	$array = [];
-	while ($row = $res->fetch_assoc()) {
-		$array[] = array('Value' => $row['id']);
-	}
-	
-	echo json_encode($array);
 	mysqli_close($mysqli);
 ?>

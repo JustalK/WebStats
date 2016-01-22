@@ -4,6 +4,9 @@ $(document).ready(function(){
 	var joueur = $(option1).attr("id");
 	var listCircle = [];
 	var listValue = [];
+	var listPlayerID = [];
+	var listPlayerNAME = [];
+	
 	var nbrPlayer = 2;
 	var inside = false;
     var insideOne = false;
@@ -13,12 +16,60 @@ $(document).ready(function(){
     
     
 	var socket = io.connect("http://192.168.1.21:8081");
-	socket.emit('addTable');
+	socket.emit('addStats');
 	
-	socket.on('marker', function (message) {
-		console.log("Launching Game with "+message.id+" player(s)");
+	
+	// CONNECTION DES JOUEURS
+	socket.on('connection', function (message) {
+		// Certainement une nouvelle partie
+		if(listPlayerID.length <= 4) {
+			listPlayerID.push(message.id);
+			listPlayerNAME.push(message.pseudo);
+		} else {
+			listPlayerNAME = [];
+		}
+		if(listPlayerID.length == 1) {
+			$("#joueur1").html(message.pseudo);
+		}
+		if(listPlayerID.length == 2) {
+			$("#joueur2").html(message.pseudo);
+		}
+		if(listPlayerID.length == 3) {
+			$("#joueur3").html(message.pseudo);
+		}
+		if(listPlayerID.length == 4) {
+			$("#joueur4").html(message.pseudo);
+		}
+		console.log("Connection de ("+message.id+") alias "+message.pseudo);
+	});
+	
+	socket.on('updateMarker', function (message) {
+		console.log("Player : ("+message.id+") x:"+message.x+" y:"+message.y);
 	});
 
+	var kill = 0;
+	socket.on('killEnemy', function (message) {
+		var index = 0;
+		for(var i=0;i<listPlayerID.length;i++) {
+			if(message.id == listPlayerID[i]) {
+				index = i;
+			}
+		}
+		if(i == 0) {
+		 	$.ajax({
+		 		method: "POST",
+		 		url: "script/pushValue.php",
+		 		async: false,
+		 		data: { JOUEUR: "player1",VALUE: kill },
+		 		dataType: "json",
+		 		success: function(data) {
+		 			console.log("test");
+		 		}
+		 	});	
+		}
+		//console.log("Player : ("+message.id+") x:"+message.x+" y:"+message.y);
+	});	
+	
 	socket.on('pseudo', function (message) {
 		console.log("Pseudo : "+message.id);
 	});	

@@ -1,54 +1,20 @@
-<?php 
-
-	$mysqli = mysqli_connect("localhost:3306", "root", "", "webstats");
-	
-	if (!$mysqli) {
-		echo "Error: Unable to connect to MySQL." . PHP_EOL;
-		echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
-		echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
-		exit;
-	}
-	/**
-	$mysqli->query("CREATE TABLE Player1(id INT)");
-	$mysqli->query("CREATE TABLE Player2(id INT)");
-	$mysqli->query("CREATE TABLE Player3(id INT)");
-	$mysqli->query("CREATE TABLE Player4(id INT)");
-	
-	$mysqli->query("INSERT INTO Player1(id) VALUES (0), (1000), (3000)");
-	$mysqli->query("INSERT INTO Player2(id) VALUES (0), (2000), (6000)");
-	$mysqli->query("INSERT INTO Player3(id) VALUES (0), (3000), (8000)");
-	$mysqli->query("INSERT INTO Player4(id) VALUES (0), (4000), (10000)");
-	
-	$res = $mysqli->query("SELECT id FROM Player1 ORDER BY id ASC");
-	**/
-	mysqli_close($mysqli);
-?>
-
-<br /><br />
-<div class="row">
-	<div class="col-md-3 vertical-align">
-		<div id="ButtonPlayer1" class="vertical-align button-player" data-bp="0" data-liaison="Player1" style="background: #FFFFFF;width:60px;height: 60px;border: 1px solid black;">
-			J1
-		</div>
-	</div>
-	<div class="col-md-3 vertical-align">
-		<div id="ButtonPlayer2" class="vertical-align button-player" data-bp="0" data-liaison="Player2" style="background: #FFFFFF;width:60px;height: 60px;border: 1px solid black;">
-			J2
-		</div>
-	</div>
-	<div class="col-md-3 vertical-align">
-		<div id="ButtonPlayer3" class="vertical-align button-player" data-bp="0" data-liaison="Player3" style="background: #FFFFFF;width:60px;height: 60px;border: 1px solid black;">
-			J3
-		</div>
-	</div>
-	<div class="col-md-3 vertical-align">
-		<div id="ButtonPlayer4" class="vertical-align button-player" data-bp="0" data-liaison="Player4" style="background: #FFFFFF;width:60px;height: 60px;border: 1px solid black;">
-			J4
-		</div>
-	</div>
-</div>
+<div id="joueur" style="display: none;"><?php echo $_POST["JOUEUR"];?></div>
 <div class="row block-bot-content">
 	<div id="graph" class="col-md-12" style="position: relative;height:500px;z-index: 2">
+			<div id="ButtonPlayer1" class="vertical-align button-player" data-bp="0" data-liaison="Player1" style="background: #FFFFFF;width:60px;height: 60px;border: 1px solid black;position:absolute;right: 0;top: 50px;z-index:1000;">
+				J1
+			</div>
+			
+			<div id="ButtonPlayer2" class="vertical-align button-player" data-bp="0" data-liaison="Player2" style="background: #FFFFFF;width:60px;height: 60px;border: 1px solid black;position:absolute;right: 0;top: 150px;z-index:1000;">
+				J2
+			</div>
+			<div id="ButtonPlayer3" class="vertical-align button-player" data-bp="0" data-liaison="Player3" style="background: #FFFFFF;width:60px;height: 60px;border: 1px solid black;position:absolute;right: 0;top: 250px;z-index:1000;">
+				J3
+			</div>
+			<div id="ButtonPlayer4" class="vertical-align button-player" data-bp="0" data-liaison="Player4" style="background: #FFFFFF;width:60px;height: 60px;border: 1px solid black;position:absolute;right: 0;top: 350px;z-index:1000;">
+				J4
+			</div>		
+		
 			<canvas id="Grille" style="position: absolute;z-index: 1;">
 			</canvas>
 
@@ -76,8 +42,6 @@
 	</div>
 
 </div>
-  	
-C'est <?php echo $_POST["JOUEUR"]; ?> !
 
 <script src="js/statistique.js"></script>
 

@@ -26,10 +26,10 @@ html,body
 	<div class="row block-top">
 		<div class="container">
 			<div class="row">
-			  <div id="joueur1" class="col-md-3 button-block-player button-block-player-first vertical-align font-player">Joueur 1</div>
-			  <div id="joueur2" class="col-md-3 button-block-player vertical-align font-player">Joueur 2</div>
-			  <div id="joueur3" class="col-md-3 button-block-player vertical-align font-player">Joueur 3</div>
-			  <div id="joueur4" class="col-md-3 button-block-player vertical-align font-player">Joueur 4</div>
+			  <div id="joueur1" class="col-md-3 button-block-player button-block-player-first vertical-align font-player">zzz</div>
+			  <div id="joueur2" class="col-md-3 button-block-player vertical-align font-player">joueur2</div>
+			  <div id="joueur3" class="col-md-3 button-block-player vertical-align font-player">joueur3</div>
+			  <div id="joueur4" class="col-md-3 button-block-player vertical-align font-player">joueur4</div>
 			</div>
 		</div>
 	</div>
@@ -39,7 +39,6 @@ html,body
 			<div class="container" style="height: 100%;">
 				<div class="row" style="background: #f2f2f2;height: 100%;">
 					<div class="col-md-2 vertical-align" style="height: 100%;"><img src="imgs/blue.png" /></div>
-				  	<div class="col-md-2 vertical-align font-name" style="height: 100%;">NAME</div>
 				</div>
 			</div>
 		</div>

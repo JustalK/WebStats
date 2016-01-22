@@ -1,4 +1,4 @@
-var joueur = "joueur1";
+var joueur = $("#joueur").html();
 var listCircle = [];
 var listValue = [];
 var listPlayer = [];
@@ -23,6 +23,7 @@ var listValuePlayer4 = [];
 
 init();
 function init() {
+	$("#Player1").hide();
 	$("#Player2").hide();
 	$("#Player3").hide();
 	$("#Player4").hide();
@@ -52,6 +53,28 @@ if( joueur == "joueur1") {
 	$("#ButtonPlayer1").attr("data-bp","1");
 	$("#ButtonPlayer1").css("background","#FF0000");
 	$("#ButtonPlayer1").css('border', '3px solid black');
+	$("#Player1").show();
+}
+
+if( joueur == "joueur2") {
+	$("#ButtonPlayer2").attr("data-bp","1");
+	$("#ButtonPlayer2").css("background","#FF0000");
+	$("#ButtonPlayer2").css('border', '3px solid black');
+	$("#Player2").show();
+}
+
+if( joueur == "joueur3") {
+	$("#ButtonPlayer3").attr("data-bp","1");
+	$("#ButtonPlayer3").css("background","#FF0000");
+	$("#ButtonPlayer3").css('border', '3px solid black');
+	$("#Player3").show();
+}
+
+if( joueur == "joueur4") {
+	$("#ButtonPlayer4").attr("data-bp","1");
+	$("#ButtonPlayer4").css("background","#FF0000");
+	$("#ButtonPlayer4").css('border', '3px solid black');
+	$("#Player4").show();
 }
 
 $(".button-player").click(function() {
@@ -123,6 +146,11 @@ function restatistique() {
 	  
 	  setAxes();
 	  drawGrille();
+}
+
+pushValue("Player1",100);
+function pushValue(player,value) {
+	
 }
 
 /**

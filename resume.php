@@ -148,10 +148,10 @@
 			<div class="col-md-3 vertical-align-only">
 				<table>
 					<tr>
-						<td>Argent gagn&#233 : 23456789</td>
+						<td>Argent gagn&#233 : <strong id="gold">0</strong></td>
 					</tr>
 					<tr>
-						<td class="font-average"><i>Argent gagn&#233 par partie : 234</i></td>
+						<td class="font-average"><i>Argent gagn&#233 par partie : <strong id="goldAverage">0</strong></i></td>
 					</tr>
 				</table>
 			</div>
@@ -162,7 +162,7 @@
 			<div class="col-md-3 vertical-align-only">
 				<table>
 					<tr>
-						<td>Parties jou&#233es : 45678</td>
+						<td>Parties jou&#233es : <strong id="party">0</strong></td>
 					</tr>
 					<tr>
 						<td class="font-average"><i>Parties gagn&#233es : 98</i></td>
@@ -179,10 +179,10 @@
 			<div class="col-md-3 vertical-align-only">
 				<table>
 					<tr>
-						<td>Tourelles pos&#233s : 9876</td>
+						<td>Tourelles pos&#233s : <strong id="tower">0</strong></td>
 					</tr>
 					<tr>
-						<td class="font-average"><i>Tourelles pos&#233s par partie : 234</i></td>
+						<td class="font-average"><i>Tourelles pos&#233s par partie : <strong id="towerAverage">0</strong></i></td>
 					</tr>
 				</table>
 			</div>
@@ -196,10 +196,10 @@
 			<div class="col-md-3 vertical-align-only">
 				<table>
 					<tr>
-						<td>Zombies tu&#233s : 678</td>
+						<td>Zombies tu&#233s : <strong id="zombi">0</strong></td>
 					</tr>
 					<tr>
-						<td class="font-average"><i>Zombies tu&#233s par partie : 76</i></td>
+						<td class="font-average"><i>Zombies tu&#233s par partie : <strong id="zombiAverage">0</strong></i></td>
 					</tr>
 				</table>
 			</div>
@@ -210,10 +210,10 @@
 			<div class="col-md-3 vertical-align-only">
 				<table>
 					<tr>
-						<td>Vagues d&#233truites : 5478</td>
+						<td>Vagues d&#233truites : <strong id="wave">0</strong></td>
 					</tr>
 					<tr>
-						<td class="font-average"><i>Vagues d&#233truites par partie : 26</i></td>
+						<td class="font-average"><i>Vagues d&#233truites par partie : <strong id="waveAverage">0</strong></i></td>
 					</tr>
 				</table>
 			</div>
@@ -224,10 +224,10 @@
 			<div class="col-md-3 vertical-align-only">
 				<table>
 					<tr>
-						<td>Pi&#232ges pos&#233s : 879868</td>
+						<td>Pi&#232ges pos&#233s : <strong id="trap">0</strong></td>
 					</tr>
 					<tr>
-						<td class="font-average"><i>Pi&#232ges pos&#233s par partie : 987</i></td>
+						<td class="font-average"><i>Pi&#232ges pos&#233s par partie : <strong id="trapAverage">0</strong></i></td>
 					</tr>
 				</table>
 			</div>
@@ -236,3 +236,7 @@
 	</div>
   </div>
 </div>
+
+<div id="test"></div>
+
+<script src="js/resume.js"></script>
